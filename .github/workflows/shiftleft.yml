@@ -26,6 +26,7 @@ jobs:
     - name: Create status check
       run: |
         #printenv
+        set +x
         curl -XPOST $PR_URL -H "Authorization: Token ${GITHUB_TOKEN}" -H "accept: application/vnd.github.antiope-preview+json" -H "Content-Type: application/json" -d "{\"name\": \"ShiftLeft NG SAST\", \"head_sha\": \"${GITHUB_REF}\", \"external_id\": \"ShiftLeftJS\", \"details_url\": \"${URL}\", \"status\": \"completed\", \"conclusion\": \"action_required\", \"output\": {\"title\": \"ShiftLeft NG SAST Findings\", \"summary\": \"Visit ${URL} for the findings\"}}"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
