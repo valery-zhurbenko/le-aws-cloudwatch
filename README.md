@@ -1,4 +1,4 @@
-eshrsrt
+eshrsrttiuyfk
 # le-aws-cloudwatch
 ##### AWS Lambda function for sending AWS CloudWatch logs to Logentries in near real-time for processing and analysing
 
